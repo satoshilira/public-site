@@ -1,0 +1,21 @@
+.App {
+  text-align: center;
+}
+
+#about-page .title {
+  color: green;
+}
+
+ul {
+  list-style-type: none;
+
+}
+
+li{
+  color: white;
+  text-decoration: none;
+  display: inline;
+  padding: 16px;
+
+}
+
