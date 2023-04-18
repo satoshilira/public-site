@@ -1,8 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
+import './fonts/ApercuMonoProBold.ttf';
+import './fonts/ApercuMonoProLight.ttf';
+import './fonts/ApercuMonoProMedium.ttf';
+import './fonts/ApercuMonoProRegular.ttf';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

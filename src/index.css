@@ -1,9 +1,14 @@
+@font-face {
+  font-family: "ApercuMonoProBold";
+  src: local("ApercuMonoProBold"),
+   url("./fonts/ApercuMonoProBold.ttf") format("truetype");
+  font-weight: bold;
+  }
+
 body {
   height: 100%;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: ApercuMonoProBold;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #000000 url("./img/background.png") no-repeat;
@@ -11,7 +16,10 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: ApercuMonoProBold;
+}
+
+.container {
+  font-family: "Light";
 }
 
