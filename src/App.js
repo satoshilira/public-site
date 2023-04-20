@@ -71,7 +71,7 @@ function TopMenu() {
   return (
     <>
       <ul>
-        <li >Ecosystem</li>
+        <li>Ecosystem</li>
         <li className='menuline'>Token Economics</li>
         <li className='menuline'>Farm</li>
         <li className='menuline'>White Paper</li>
