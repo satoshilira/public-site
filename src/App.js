@@ -8,7 +8,30 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <div class="container">
+        <TopGrid />
+        
+        
+        <AboutPage />
+        <BuyButton />
+        
+      </header>
+    </div>
+  );
+}
+function MyButton() {
+  return (
+    <button type="button" className='bordered-button'>Click Me!</button> 
+  );
+}
+function BuyButton() {
+  return (
+    <button type="button" className='buy-button'>Buy LIRA!</button> 
+  );
+}
+
+function TopGrid () {
+  return (
+    <div class="container">
   <div class="row p-4">
     <div class="col-2">
       <Logo />
@@ -26,19 +49,9 @@ function App() {
     </div>
   </div>
 </div>
-        
-        
-        <AboutPage />
-        
-      </header>
-    </div>
   );
 }
-function MyButton() {
-  return (
-    <button type="button">Click Me!</button> 
-  );
-}
+
 function AboutPage() {
   return (
     <div id='about-page'>
@@ -58,11 +71,11 @@ function TopMenu() {
   return (
     <>
       <ul>
-        <li>Ecosystem</li>
-        <li>Token Economics</li>
-        <li>Farm</li>
-        <li>White Paper</li>
-        <li>Faq</li>
+        <li >Ecosystem</li>
+        <li className='menuline'>Token Economics</li>
+        <li className='menuline'>Farm</li>
+        <li className='menuline'>White Paper</li>
+        <li className='menuline'>Faq</li>
       </ul>
     </>
 
