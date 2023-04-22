@@ -68,3 +68,7 @@ button {
   border-left: 1px solid #FFFFFF;
   transform: rotate(90deg);
 }
+
+h1{
+  color: aliceblue;
+}

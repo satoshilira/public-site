@@ -15,7 +15,6 @@ function App() {
           </div>
           
           <PageContent />
-          <BuyButton />
 
         </div>
       </header>
@@ -33,7 +32,7 @@ function TopNavbar() {
         <TopMenu />
       </div>
       <div class="col-2">
-        <MyButton />
+        
       </div>
     </div>
   );
@@ -53,7 +52,7 @@ function TopMenu() {
       <ul>
         <li>Ecosystem</li>
         <li className='menuline'>Token Economics</li>
-        <li className='menuline'>Farm</li>
+        <li className='menuline'>Dashboard</li>
         <li className='menuline'>White Paper</li>
         <li className='menuline'>Faq</li>
       </ul>
@@ -76,8 +75,8 @@ function TopImage() {
 function PageContent() {
   return (
     <div id='about-page'>
-      <h1 className='title'>{ project.name }</h1>
-      <p>The revolution of Cryptocurrency <br /> Join the Satoshi LIRA Ecosystem</p>
+      
+      <h1>Work in Progress</h1>
     </div>
   )
 }
