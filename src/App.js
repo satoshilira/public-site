@@ -29,7 +29,7 @@ function TopNavbar() {
         <Logo />
       </div>
       <div class="col-8">
-        <TopMenu />
+        
       </div>
       <div class="col-2">
         
@@ -46,19 +46,19 @@ function Logo() {
   )
 }
 
-function TopMenu() {
-  return (
-    <>
-      <ul>
-        <li>Ecosystem</li>
-        <li className='menuline'>Token Economics</li>
-        <li className='menuline'>Dashboard</li>
-        <li className='menuline'>White Paper</li>
-        <li className='menuline'>Faq</li>
-      </ul>
-    </>
-  )
-}
+// function TopMenu() {
+//   return (
+//     <>
+//       <ul>
+//         <li>Ecosystem</li>
+//         <li className='menuline'>Token Economics</li>
+//         <li className='menuline'>Dashboard</li>
+//         <li className='menuline'>White Paper</li>
+//         <li className='menuline'>Faq</li>
+//       </ul>
+//     </>
+//   )
+// }
 
 function MyButton() {
   return (
