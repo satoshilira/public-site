@@ -26,7 +26,7 @@ p {
 
 button {
   background: linear-gradient(93.63deg, #B6FE46 5.68%, rgba(9, 254, 245, 0.6) 94.48%);
-  font-family: ApercuMonoProBold;
+  font-family: "ApercuMonoProBold";
   width: 149px;
   height: 38px;
   left: 43px;
@@ -72,9 +72,11 @@ button {
 h1{
   color: aliceblue;
   font-family: "ApercuMonoProBold";
+  text-transform: uppercase;
 }
 
 h3{
   color: aliceblue;
-  font-family: "ApercuMonoProBold";
+  font-family: "ApercuMonoProMedium";
+  text-transform: uppercase;
 }
