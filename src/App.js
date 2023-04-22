@@ -76,7 +76,11 @@ function PageContent() {
   return (
     <div id='about-page'>
       
-      <h1>Work in Progress</h1>
+      <h1>Building Satoshi LIRA Ecosystem...</h1>
+      <br />
+      <br />
+      <h3>Satoshi Lira is a revolutionary project which protocol allows to generate profit from decentralized finance apps, acting as engine 
+        for the creation of a democratic ecosystem oriented towards political and economical freedom of its community.</h3>
     </div>
   )
 }
