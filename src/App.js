@@ -41,7 +41,7 @@ function TopNavbar() {
 function Logo() {
   return (
     <a href={`${window.location.protocol}//${window.location.hostname}${window.location.port !== 80 && ":3000"}`}>
-      <img src={logo} class="img-fluid" alt="Homepage Satoshi LIRA Project" />
+      <img src={logo} alt="Homepage Satoshi LIRA Project" />
     </a>
   )
 }
