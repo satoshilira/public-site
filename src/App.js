@@ -8,8 +8,6 @@ function App() {
       <header className="App-header">
         <div class="container h-100">
 
-          <TopNavbar />
-
           <div class="row p-5">
             <TopImage />
           </div>
@@ -21,31 +19,6 @@ function App() {
     </div>
   );
 }
-
-function TopNavbar() {
-  return (
-    <div class="row p-4">
-      <div class="col-2">
-        <Logo />
-      </div>
-      <div class="col-8">
-        
-      </div>
-      <div class="col-2">
-        
-      </div>
-    </div>
-  );
-}
-
-function Logo() {
-  return (
-    <a href={`${window.location.protocol}//${window.location.hostname}${window.location.port !== 80 && ":3000"}`}>
-      <img src={logo} width={120} alt="Homepage Satoshi LIRA Project" />
-    </a>
-  )
-}
-
 // function TopMenu() {
 //   return (
 //     <>
