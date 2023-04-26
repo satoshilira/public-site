@@ -1,21 +1,17 @@
-import logo from './img/topmenulogo.png';
+// import logo from './img/topmenulogo.png';
 import topimage from './img/Group15.png';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <div class="container h-100">
-
-          <div class="row p-5">
-            <TopImage />
-          </div>
-          
-          <PageContent />
-
+    <div className="App">        
+      <div className="container h-100">
+        <div className="row p-5">
+          <TopImage />
         </div>
-      </header>
+      
+        <PageContent />
+      </div>
     </div>
   );
 }
@@ -33,11 +29,11 @@ function App() {
 //   )
 // }
 
-function MyButton() {
-  return (
-    <button type="button" className='bordered-button'>Click Me!</button> 
-  );
-}
+// function MyButton() {
+//   return (
+//     <button type="button" className='bordered-button'>Click Me!</button> 
+//   );
+// }
 
 function TopImage() {
   return(
@@ -58,14 +54,14 @@ function PageContent() {
   )
 }
 
-const project = { 
-  name: 'Satoshi LIRA'
-}
+// const project = { 
+//   name: 'Satoshi LIRA'
+// }
 
-function BuyButton() {
-  return (
-    <button type="button" className='buy-button'>Buy LIRA!</button> 
-  );
-}
+// function BuyButton() {
+//   return (
+//     <button type="button" className='buy-button'>Buy LIRA!</button> 
+//   );
+// }
 
 export default App;

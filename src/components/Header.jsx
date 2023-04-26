@@ -22,8 +22,7 @@ function Header() {
           <img src={Eth} alt="eth" className="eth" />
           Ethereum
         </div>
-        <div className="connectButton" />
-        Connect
+        <div className="connectButton">Connect</div>
       </div>
     </header>
   )

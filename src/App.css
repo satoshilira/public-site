@@ -58,7 +58,7 @@ button {
   font-family: "ApercuMonoProBold";
 }
 
-.menuline{
+.menuline {
   width: 24px;
   height: 0px;
   left: 806px;
@@ -69,13 +69,13 @@ button {
   transform: rotate(90deg);
 }
 
-h1{
+h1 {
   color: aliceblue;
   font-family: "ApercuMonoProBold";
   text-transform: uppercase;
 }
 
-h3{
+h3 {
   color: aliceblue;
   font-family: "ApercuMonoProMedium";
   text-transform: uppercase;

@@ -39,9 +39,9 @@ function Swap() {
       setTokenTwo(tokenList[i]);
     }
     setIsOpen(false);
-    }
+  }
   
-    const settings = (
+  const settings = (
     <>
       <div>Slippage Tolerance</div>
       <div>
@@ -56,64 +56,62 @@ function Swap() {
 
   return (
     <>
-    <Modal
-      open={isOpen}
-      footer={null}
-      onCancel={() => setIsOpen(false)}
-      title="Select a token"
-    >
-      <div className="modalContent">
-        {tokenList?.map((e, i)=>{
-          return(
-            <div
-              className="tokenChoice"
-              key={i}
-              onClick={() => modifyToken(i)}
-            >
-              <img src={e.img} alt={e.ticker} className="tokenLogo"  />
-              <div className="tokenChoiceNames">
-                <div className="tokenName">{e.name}</div>
-                <div className="tokenTicker">{e.ticker}</div>
+      <Modal
+        open={isOpen}
+        footer={null}
+        onCancel={() => setIsOpen(false)}
+        title="Select a token"
+      >
+        <div className="modalContent">
+          {tokenList?.map((e, i)=>{
+            return(
+              <div
+                className="tokenChoice"
+                key={i}
+                onClick={() => modifyToken(i)}
+              >
+                <img src={e.img} alt={e.ticker} className="tokenLogo" />
+                <div className="tokenChoiceNames">
+                  <div className="tokenName">{e.name}</div>
+                  <div className="tokenTicker">{e.ticker}</div>
+                </div>
               </div>
-            </div>
-
             )          
-        })}
+          })}
         </div>
-    </Modal>
+      </Modal>
 
-    <div className="tradeBox">
-      <div className="tradeBoxHeader">
-        <h4>Swap</h4>
-        <Popover
-          content={settings}
-          title="Settings"
-          trigger="click"
-          placement="bottomRight"
-        >
-          <SettingOutlined className="cog" />
-        </Popover>
-      </div>
-      <div className="inputs">
-        <Input placeholder="0" value={tokenOneAmount} onChange={changeAmount} />
-        <Input placeholder="0" value={tokenTwoAmount} disabled={true} />
-        <div className="switchButton" onClick={switchTokens}>
-          <ArrowDownOutlined className="switchArrow" />
+      <div className="tradeBox">
+        <div className="tradeBoxHeader">
+          <h4>Swap</h4>
+          <Popover
+            content={settings}
+            title="Settings"
+            trigger="click"
+            placement="bottomRight"
+          >
+            <SettingOutlined className="cog" />
+          </Popover>
+        </div>
+        <div className="inputs">
+          <Input placeholder="0" value={tokenOneAmount} onChange={changeAmount} />
+          <Input placeholder="0" value={tokenTwoAmount} disabled={true} />
+          <div className="switchButton" onClick={switchTokens}>
+            <ArrowDownOutlined className="switchArrow" />
           </div>
-        
-        <div className="assetOne" onClick={() => openModal(1)}>
-          <img src={tokenOne.img} alt="assetOneLogo" className="assetLogo" />
-          {tokenOne.ticker}
-          <DownOutlined />
+          <div className="assetOne" onClick={() => openModal(1)}>
+            <img src={tokenOne.img} alt="assetOneLogo" className="assetLogo" />
+            {tokenOne.ticker}
+            <DownOutlined />
+          </div>
+          <div className="assetTwo" onClick={() => openModal(2)}>
+            <img src={tokenTwo.img} alt="assetTwoLogo" className="assetLogo" />
+            {tokenTwo.ticker}
+            <DownOutlined />
+          </div>
         </div>
-        <div className="assetTwo" onClick={() => openModal(2)}>
-        <img src={tokenTwo.img} alt="assetTwoLogo" className="assetLogo" />
-          {tokenTwo.ticker}
-          <DownOutlined />
-        </div>
+        <div className="swapButton" disabled={!tokenOneAmount || (tokenOne.name === tokenTwo.name)}>Swap</div>
       </div>
-      <div className="swapButton" disabled={!tokenOneAmount}>Swap</div>
-    </div>
     </>
   )
 }
