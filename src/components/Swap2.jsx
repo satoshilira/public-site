@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { Input, Popover, Radio, Modal, message, Button, Tooltip } from "antd"
+import { Input, Popover, Radio, Modal, message, Card, Space, Select, Tooltip, Button, Row, Col, InputNumber, Cascader } from "antd"
 import {
   AreaChartOutlined,
   ArrowDownOutlined,
   DownOutlined,
   DownloadOutlined,
+  EditOutlined,
   EllipsisOutlined,
   SettingOutlined,
+  SlidersOutlined,
+  SwapOutlined,
 } from "@ant-design/icons";
 import tokenList from "../tokenList.json";
 
@@ -18,6 +21,8 @@ function Swap() {
   const [tokenTwo, setTokenTwo] = useState(tokenList[6]);
   const [isOpen, setIsOpen] = useState(false);
   const [changeToken, setChangeToken] = useState(1);
+
+  const swapButtonText = 'Connect wallet'; // 'Swap'
   
   function handleSlippageChange(e) {
     setSlippage(e.target.value);
@@ -57,17 +62,33 @@ function Swap() {
     </>
   );
 
+  const infoGroups = (
+    <>
+      <div>Informations</div>
+      <div>
+        <Button.Group>
+          <Tooltip title="Tooltip">
+            <Button type="primary" icon={<SettingOutlined  key="setting" />} />
+          </Tooltip>
+          <Tooltip title="graphic">
+            <Button type="primary" icon={<AreaChartOutlined key="graphic" />} />
+          </Tooltip>
+          <Tooltip title="ellipsis">
+            <Button type="primary" icon={<EllipsisOutlined key="ellipsis" />} />
+          </Tooltip>
+        </Button.Group>
+      </div>
+    </>
+  );
+
   const CustomGroup = (props) => (
     <Button.Group {...props}>
       <Button type="primary">Button 1</Button>
       <Tooltip title="Tooltip">
-        <Button type="primary" icon={<DownloadOutlined />} />
+        <Button type="primary" icon={<AreaChartOutlined key="graphic" />} />
       </Tooltip>
       <Tooltip title="Tooltip">
-        <Button type="primary" icon={<SettingOutlined key="setting" />} />
-      </Tooltip>
-      <Tooltip title="Tooltip">
-        <Button type="primary" icon={<AreaChartOutlined key="areaChart" />} />
+        <Button type="primary" icon={<DownloadOutlined />} disabled />
       </Tooltip>
       <Tooltip title="Tooltip">
         <Button type="primary" icon={<EllipsisOutlined key="ellipsis" />} />
@@ -83,7 +104,7 @@ function Swap() {
         onCancel={() => setIsOpen(false)}
         title="Select a token"
       >
-        <div className="modalContent">
+        <div>
           {tokenList?.map((e, i)=>{
             return(
               <div
@@ -97,42 +118,77 @@ function Swap() {
                   <div className="tokenTicker">{e.ticker}</div>
                 </div>
               </div>
-            )          
+            )
           })}
         </div>
       </Modal>
 
-      <div className="tradeBox">
-        <div className="tradeBoxHeader">
-          <h4>Swap</h4>
+      <Card title="Swap" bordered={true} 
+        extra={
           <Popover
             content={settings}
             title="Settings"
             trigger="click"
             placement="bottomRight"
           >
-            <SettingOutlined className="cog" />
+            <SettingOutlined />
           </Popover>
-        </div>
-        <div className="inputs">
-          <Input placeholder="0" value={tokenOneAmount} onChange={changeAmount} />
-          <Input placeholder="0" value={tokenTwoAmount} disabled={true} />
-          <div className="switchButton" onClick={switchTokens}>
-            <ArrowDownOutlined className="switchArrow" />
-          </div>
-          <div className="assetOne" onClick={() => openModal(1)}>
-            <img src={tokenOne.img} alt="assetOneLogo" className="assetLogo" />
-            {tokenOne.ticker}
-            <DownOutlined />
-          </div>
-          <div className="assetTwo" onClick={() => openModal(2)}>
-            <img src={tokenTwo.img} alt="assetTwoLogo" className="assetLogo" />
-            {tokenTwo.ticker}
-            <DownOutlined />
-          </div>
-        </div>
-        <div className="swapButton" disabled={!tokenOneAmount || (tokenOne.name === tokenTwo.name)}>Swap</div>
-      </div>
+        } 
+        style={{ width: 500 }} 
+        actions={[
+          <div type="primary">{swapButtonText}</div>
+        ]}>
+          <Row>
+            <Col>
+              <InputNumber
+                addonBefore={<Cascader placeholder="cascader" style={{ width: 150 }} size="large" />}
+                style={{ width: '100%' }}
+                size="large"
+                min={1} max={100000}
+              />
+            </Col>
+          </Row>
+
+          <Row>
+            <Col>
+              <Tooltip title="search">
+                <Button type="primary" shape="circle" icon={<SwapOutlined />} />
+              </Tooltip>
+              <p>Proof</p>
+            </Col>
+          </Row>
+
+          <Row>
+            <Col>
+              <InputNumber
+                addonBefore={<Cascader placeholder="cascader" style={{ width: 150 }} size="large" />}
+                style={{ width: '100%' }}
+                size="large"
+                min={1} max={100000}
+              />
+            </Col>
+          </Row>
+  
+        <Space direction="vertical" style={{ width: '100%' }}>
+
+          <Select
+            defaultValue="lucy"
+            style={{ width: 120 }}
+            allowClear
+            options={[
+              {
+                value: 'lucy',
+                label: 'Lucy',
+              },
+            ]}
+          />
+
+          <Select status="warning" style={{ width: '100%' }} size="large" />
+          <p>Card content</p>
+          <p>Card content</p>
+
+        </Space>
+      </Card>
     </>
   )
 }

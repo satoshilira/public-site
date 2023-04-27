@@ -1,14 +1,10 @@
-.App {
-  text-align: center;
-}
-
 #about-page .title {
   color: green;
 }
 
 ul {
   position: relative;
-  top: 25px;
+  /* top: 25px; */
   font-family: "ApercuMonoProMedium";
   text-transform: uppercase;
 }

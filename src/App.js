@@ -1,18 +1,19 @@
 // import logo from './img/topmenulogo.png';
 import topimage from './img/Group15.png';
 import './App.css';
+import { Layout } from 'antd';
+
+const { Header, Footer, Sider, Content } = Layout;
+
 
 function App() {
   return (
-    <div className="App">        
-      <div className="container h-100">
-        <div className="row p-5">
-          <TopImage />
-        </div>
-      
-        <PageContent />
-      </div>
-    </div>
+    <Content>
+      <TopImage />
+
+      <PageContent />
+
+    </Content>
   );
 }
 // function TopMenu() {
