@@ -7,23 +7,23 @@ function Header() {
   return (
     <header>
       <div className='leftH'>
-        <a href={`${window.location.protocol}//${window.location.hostname}${window.location.port !== 80 && ":3000"}`}>
+        <Link to="/" className="link">
           <img src={logo} width={120} alt="Homepage Satoshi LIRA Project" />
-        </a>
-        <Link to="/swap" className="link">
+        </Link>
+        {/* <Link to="/swap" className="link">
           <div className="headerItem">Swap</div>
         </Link>
         <Link to="/tokens" className="link">
           <div className="headerItem">Tokens</div>
-        </Link>
+        </Link> */}
       </div>
-      <div className="rightH">
+      {/* <div className="rightH">
         <div className="headerItem">
           <img src={Eth} alt="eth" className="eth" />
           Ethereum
         </div>
         <div className="connectButton">Connect</div>
-      </div>
+      </div> */}
     </header>
   )
 }

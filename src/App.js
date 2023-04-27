@@ -44,11 +44,10 @@ function TopImage() {
 function PageContent() {
   return (
     <div id='about-page'>
-      
       <h1>Building Satoshi LIRA Ecosystem...</h1>
       <br />
       <br />
-      <h3>Satoshi Lira is a revolutionary project which protocol allows to generate profit from decentralized finance apps, acting as engine 
+      <h3 style={{ margin: '0 5%' }}>Satoshi Lira is a revolutionary project which protocol allows to generate profit from decentralized finance apps, acting as engine 
         for the creation of a democratic ecosystem oriented towards political and economical freedom of its community.</h3>
     </div>
   )
