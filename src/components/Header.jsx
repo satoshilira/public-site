@@ -16,9 +16,6 @@ function Header() {
         <Link to="/swap" className="headerItem link">
           <div>Swap</div>
         </Link>
-        <Link to="/swap2" className="headerItem link">
-          <div>Swap2</div>
-        </Link>
         <Link to="/tokens" className="headerItem link">
           <div>Tokens</div>
         </Link>

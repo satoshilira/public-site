@@ -8,9 +8,11 @@ import {
   DownloadOutlined,
   EditOutlined,
   EllipsisOutlined,
+  InfoCircleOutlined,
   SettingOutlined,
   SlidersOutlined,
   SwapOutlined,
+  UserOutlined,
 } from "@ant-design/icons";
 import tokenList from "../tokenList.json";
 
@@ -30,7 +32,7 @@ function Swap() {
     setSlippage(e.target.value);
   }
   function changeAmount(e) {
-    setTokenOneAmount(e);
+    setTokenOneAmount(e.target.value);
     
     // se manca token2, 
     // setSwapButtonText('Select a token')
@@ -106,13 +108,14 @@ function Swap() {
       <Row style={{ marginTop: '5rem' }}>
         <Col xs={6} xl={8}></Col>
         <Col xs={12} xl={8}>
+
           <Modal
             open={isOpen}
             footer={null}
             onCancel={() => setIsOpen(false)}
             title="Select a token"
           >
-            <div>
+            <div className="modalContent">
               {tokenList?.map((e, i)=>{
                 return(
                   <div
@@ -131,66 +134,37 @@ function Swap() {
             </div>
           </Modal>
 
-          <Card title="Swap" bordered={true} 
-            extra={
+          <div className="tradeBox">
+            <div className="tradeBoxHeader">
+              <h4>Swap</h4>
               <Popover
                 content={settings}
                 title="Settings"
                 trigger="click"
                 placement="bottomRight"
               >
-                <SettingOutlined />
+                <SettingOutlined className="cog" />
               </Popover>
-            } 
-            actions={[
-              <div type="primary">{swapButtonText}</div>
-            ]}>
-
-              <Row style={{ 'margin-top': '1rem', 'margin-bottom': '0.5rem' }}>
-                <Col span={12}>
-                  From
-                </Col>
-                <Col span={12} style={{ 'display': 'flex', 'justifyContent': 'flex-end' }}>
-                  Balance: 0
-                </Col>
-              </Row>
-
-              <Row >
-                <Col span={24} style={{ 'margin-bottom': '1rem' }}>
-                  <InputNumber
-                    addonBefore={<Cascader placeholder="cascader" style={{ width: 150 }} size="large" />}
-                    style={{ width: '100%' }}
-                    size="large"
-                    min={1} max={100000}
-                    onChange={changeAmount}
-                  />
-                </Col>
-              </Row>
-
-              <Divider>
-                <SwapOutlined className='rotate90deg'/>
-              </Divider>
-              
-              <Row style={{ 'margin-top': '1rem', 'margin-bottom': '0.5rem' }}>
-                <Col span={12}>
-                  To (estimated)
-                </Col>
-                <Col span={12} style={{ 'display': 'flex', 'justifyContent': 'flex-end' }}>
-                  Balance: 0
-                </Col>
-              </Row>
-
-              <Row>
-                <Col span={24} style={{ 'margin-bottom': '1rem' }}>
-                  <InputNumber
-                    addonBefore={<Cascader placeholder="cascader" style={{ width: 150 }} size="large" />}
-                    style={{ width: '100%' }}
-                    size="large"
-                    min={1} max={100000}>
-                  </InputNumber>
-                </Col>
-              </Row>
-          </Card>
+            </div>
+            <div className="inputs">
+              <Input placeholder="0" value={tokenOneAmount} onChange={changeAmount} />
+              <Input placeholder="0" value={tokenTwoAmount} disabled={true} />
+              <div className="switchButton" onClick={switchTokens}>
+                <ArrowDownOutlined className="switchArrow" />
+              </div>
+              <div className="assetOne" onClick={() => openModal(1)}>
+                <img src={tokenOne.img} alt="assetOneLogo" className="assetLogo" />
+                {tokenOne.ticker}
+                <DownOutlined />
+              </div>
+              <div className="assetTwo" onClick={() => openModal(2)}>
+                <img src={tokenTwo.img} alt="assetTwoLogo" className="assetLogo" />
+                {tokenTwo.ticker}
+                <DownOutlined />
+              </div>
+            </div>
+            <div className="swapButton" disabled={!tokenOneAmount || (tokenOne.name === tokenTwo.name)}>Swap</div>
+          </div>
         </Col>
         <Col xs={6} xl={8}></Col>
       </Row>
