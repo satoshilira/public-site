@@ -11,21 +11,18 @@ const { Footer, Content } = Layout;
 
 function Router() {
   return (
-
-    // header
-
     <Layout>
       <Header/>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/swap" element={<Swap />} />
-        <Route path="/swap2" element={<Swap2 />} />
-        <Route path="/tokens" element={<Tokens />} />
-      </Routes> 
+      <Content>
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/swap" element={<Swap />} />
+          <Route path="/swap2" element={<Swap2 />} />
+          <Route path="/tokens" element={<Tokens />} />
+        </Routes>
+      </Content>
       <Footer>Footer</Footer>
     </Layout>
-
-    // aggiungere footer
   )
 }
 

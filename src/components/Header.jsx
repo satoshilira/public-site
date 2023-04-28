@@ -13,18 +13,18 @@ function Header() {
         <Link to="/" className="link">
           <img src={logo} width={120} alt="Homepage Satoshi LIRA Project" />
         </Link>
-        <Link to="/swap" className="link">
+        <Link to="/swap" className="headerItem link">
           <div>Swap</div>
         </Link>
-        <Link to="/swap2" className="link">
+        <Link to="/swap2" className="headerItem link">
           <div>Swap2</div>
         </Link>
-        <Link to="/tokens" className="link">
+        <Link to="/tokens" className="headerItem link">
           <div>Tokens</div>
         </Link>
       </div>
       <div className="rightH">
-        <div className="headerItem">
+        <div className="headerItem link">
           <img src={Eth} alt="eth" className="eth" />
           Ethereum
         </div>

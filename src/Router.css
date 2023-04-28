@@ -265,3 +265,25 @@ header {
   font-weight: 300;
   color: #51596f;
 }
+
+
+/* START CSS Nik - TODO: evaluate move in component */
+
+.rotate90deg {
+  transform: rotate(90deg);
+}
+
+:where(.css-dev-only-do-not-override-zjzpde).ant-layout {
+  background: none;
+}
+
+:where(.css-dev-only-do-not-override-zjzpde).ant-layout-header {
+  line-height: 20px;
+}
+
+:where(.css-dev-only-do-not-override-zjzpde).ant-layout-footer {
+  background: none;
+  color: white;
+}
+
+/* END CSS Nik */

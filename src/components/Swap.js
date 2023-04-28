@@ -23,6 +23,7 @@ function Swap() {
     setSlippage(e.target.value);
   }
   function changeAmount(e) {
+    debugger;
     setTokenOneAmount(e.target.value);
   }
   function switchTokens(){
@@ -97,7 +98,7 @@ function Swap() {
                   <div className="tokenTicker">{e.ticker}</div>
                 </div>
               </div>
-            )          
+            )
           })}
         </div>
       </Modal>
