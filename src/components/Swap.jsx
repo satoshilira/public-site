@@ -15,15 +15,17 @@ import {
   UserOutlined,
 } from "@ant-design/icons";
 import tokenList from "../tokenList.json";
+import axios from "axios";
 
 function Swap() {
   const [slippage, setSlippage] = useState(2.5);
   const [tokenOneAmount, setTokenOneAmount] = useState('');
   const [tokenTwoAmount, setTokenTwoAmount] = useState('');
   const [tokenOne, setTokenOne] = useState(tokenList[0]);
-  const [tokenTwo, setTokenTwo] = useState(tokenList[6]);
+  const [tokenTwo, setTokenTwo] = useState(tokenList[1]);
   const [isOpen, setIsOpen] = useState(false);
   const [changeToken, setChangeToken] = useState(1);
+  const [prices, setPrices] = useState(null);
 
   const [swapButtonText, setSwapButtonText] = useState('Enter an amount');
   // 'Enter an amount'; // 'Connect wallet'; // 'Swap'
@@ -33,28 +35,59 @@ function Swap() {
   }
   function changeAmount(e) {
     setTokenOneAmount(e.target.value);
+    if(e.target.value && prices){
+      setTokenTwoAmount((e.target.value * prices.ratio).toFixed(8))
+    }else{
+      setTokenTwoAmount(null);
+    }
     
     // se manca token2, 
     // setSwapButtonText('Select a token')
   }
   function switchTokens() {
+    setPrices(null);
+    setTokenOneAmount(null);
+    setTokenTwoAmount(null);
     const one = tokenOne;
     const two = tokenTwo;
     setTokenOne(two);
     setTokenTwo(one);
+    fetchPrices(two.address, one.address);
   }
   function openModal(asset) {
     setChangeToken(asset)
     setIsOpen(true);
   }
   function modifyToken(i) {
+    setPrices(null);
+    setTokenOneAmount(null);
+    setTokenTwoAmount(null);
     if (changeToken === 1) {
       setTokenOne(tokenList[i]);
+      fetchPrices(tokenList[i].address, tokenTwo.address)
     }  else {
       setTokenTwo(tokenList[i]);
+      fetchPrices(tokenOne.address, tokenList[i].address)
     }
     setIsOpen(false);
   }
+
+  async function fetchPrices(one, two){
+    const res = await axios.get('http://localhost:3001/tokenPrice', {
+      params: {addressOne: one, addressTwo: two}
+    })
+
+    console.log(res.data);
+    setPrices(res.data)
+  }
+
+  useEffect(()=>{
+
+    fetchPrices(tokenList[0].address, tokenList[1].address)
+
+  }, [])
+
+
   
   const settings = (
     <>
@@ -106,8 +139,8 @@ function Swap() {
   return (
     <>
       <Row style={{ marginTop: '5rem' }}>
-        <Col xs={6} xl={8}></Col>
-        <Col xs={12} xl={8}>
+        <Col xs={3} xl={8}></Col>
+        <Col xs={18} xl={8}>
 
           <Modal
             open={isOpen}
@@ -166,7 +199,7 @@ function Swap() {
             <div className="swapButton" disabled={!tokenOneAmount || (tokenOne.name === tokenTwo.name)}>Swap</div>
           </div>
         </Col>
-        <Col xs={6} xl={8}></Col>
+        <Col xs={3} xl={8}></Col>
       </Row>
     </>
   )
