@@ -42,7 +42,7 @@ button {
   left: 35px;
   top: 42px;
   border-radius: 30px;
-  
+
 }
 
 .buy-button {
@@ -50,7 +50,7 @@ button {
   height: 76.5px;
   left: 76px;
   top: 69px;
-  
+
   border: 4px solid #FFFFFF;
 }
 
@@ -69,13 +69,7 @@ button {
   transform: rotate(90deg);
 }
 
-h1 {
-  color: aliceblue;
-  font-family: "ApercuMonoProBold";
-  text-transform: uppercase;
-}
-
-h3 {
+h1, h2, h3, h4, h5, h6 {
   color: aliceblue;
   font-family: "ApercuMonoProMedium";
   text-transform: uppercase;
