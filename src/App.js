@@ -2,6 +2,7 @@
 import topimage from './img/Group15.png';
 import './App.css';
 import { Layout } from 'antd';
+import Flex from './components/Flex';
 
 const { Header, Footer, Sider, Content } = Layout;
 
@@ -37,20 +38,45 @@ function App() {
 // }
 
 function TopImage() {
-  return(
-    <img src={topimage} className="img-fluid" alt="Satoshi LIRA Cryptocurrecy Revolution" />
+  return (
+    <Flex marginLeft="8%" marginTop={150} >
+      <img src={topimage} className="img-fluid" alt="Satoshi LIRA Cryptocurrecy Revolution" />
+    </Flex>
   )
 }
 
 function PageContent() {
   return (
-    <div id='about-page'>
-      <h1>Building Satoshi LIRA Ecosystem...</h1>
-      <br />
-      <br />
-      <h3 style={{ margin: '0 5%' }}>Satoshi Lira is a revolutionary project which protocol allows to generate profit from decentralized finance apps, acting as engine 
-        for the creation of a democratic ecosystem oriented towards political and economical freedom of its community.</h3>
-    </div>
+    <>
+      <Flex margin="100px 10% 0 10%">
+        <Flex width="30%">
+          <div id='about-page'>
+            <br />
+            <h1>Building Satoshi LIRA Ecosystem...</h1>
+            <br />
+            <h3 >Satoshi Lira is a revolutionary project which protocol allows to generate profit from decentralized finance apps, acting as engine
+              for the creation of a democratic ecosystem oriented towards political and economical freedom of its community.</h3>
+          </div>
+        </Flex>
+        <Flex flex={1} justifyContent="center" alignItems="center">
+          <Flex flexDirection="column" width="30%">
+            <Flex>
+              <h1>Presale Supply</h1>
+            </Flex>
+            <Flex borderTop="1px solid white">
+              <h1 >Total 900M LIRA</h1>
+            </Flex>
+            <Flex borderBottom="1px solid white">
+              <h1>Left 223,050M LIRA</h1>
+            </Flex>
+            <Flex justifyContent="center" flex={1} marginTop="30px">
+              <div className="button">Join Presale</div>
+            </Flex>
+          </Flex>
+        </Flex>
+      </Flex>
+
+    </>
   )
 }
 
