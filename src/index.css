@@ -19,7 +19,7 @@
   font-weight: 400;
 }
 
-html {
+html, p {
   font-family: ApercuMonoProRegular;
 }
 

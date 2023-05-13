@@ -6,6 +6,7 @@ import {
   lineHeight,
   textAlign,
   width,
+  margin,
 } from 'styled-system';
 
 const Typography = styled.p`
@@ -23,6 +24,7 @@ const Typography = styled.p`
   ${fontWeight}
   ${textAlign}
   ${width}
+  ${margin}
 `;
 
 export default Typography;

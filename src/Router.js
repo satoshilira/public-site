@@ -4,27 +4,28 @@ import Header from "./components/Header";
 import Swap from "./components/Swap";
 import Tokens from "./components/Tokens";
 import { Routes, Route } from "react-router-dom";
-import { Layout } from "antd";
 import { useConnect, useAccount } from "wagmi";
 import { MetaMaskConnector } from "wagmi/connectors/metaMask";
+import Footer from "./components/Footer"
+import Flex from "./components/Flex";
 
-const { Footer, Content } = Layout;
+// const { Content } = Layout;
 
 function Router() {
   const { address, isConnected } = useAccount()
 
   return (
-    <Layout>
+    <Flex flexDirection="column" minHeight="calc(100vh - 155px)" justifyContent="space-between">
       <Header/>
-      <Content>
+      <Flex>
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="/swap" element={<Swap />} />
           <Route path="/tokens" element={<Tokens />} />
         </Routes>
-      </Content>
-      <Footer>Footer</Footer>
-    </Layout>
+      </Flex>
+      <Footer/>
+    </Flex>
   )
 }
 

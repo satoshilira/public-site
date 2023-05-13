@@ -295,10 +295,10 @@ header {
   text-transform: uppercase;
   text-decoration: none;
   padding: 10px 20px;
-  border: 1px solid #37bc66;
-  margin: 20px;
+  border: 1px solid #2b5339;
+  /* margin: 20px; */
   position: relative;
-  color: #37bc66;
+  color: v;
   letter-spacing: 1px;
 }
 .button:before {
@@ -306,7 +306,7 @@ header {
   width: 20px;
   height: 20px;
   background: #000000;
-  border: 1px solid #37bc66;
+  border: 1px solid #2b5339;
   transform: rotate(45deg);
   position: absolute;
   border-top: 0;
@@ -321,7 +321,7 @@ header {
   width: 20px;
   height: 20px;
   background: #000000;
-  border: 1px solid #37bc66;
+  border: 1px solid #2b5339;
   transform: rotate(-132deg);
   position: absolute;
   border-top: 0;

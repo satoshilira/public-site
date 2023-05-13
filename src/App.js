@@ -1,4 +1,4 @@
-import {Col, Divider, Row} from 'antd';
+import { Col, Divider, Row } from 'antd';
 import topImage from './img/Group15.png';
 import './App.css';
 import { Layout } from 'antd';
@@ -39,7 +39,7 @@ function App() {
 
 function TopImage() {
   return (
-    <Flex justifyContent="center" marginTop={150} >
+    <Flex justifyContent="center" marginTop={50} >
       <img src={topImage} className="img-fluid" alt="Satoshi LIRA Cryptocurrecy Revolution" />
     </Flex>
   )
@@ -48,17 +48,21 @@ function TopImage() {
 function PageContent() {
   return (
     <>
-      <Flex margin="100px 10% 0 10%">
-        <Flex width="30%">
+      <Flex justifyContent="center">
+        <Flex width="50%">
           <div id='about-page'>
             <br />
-            <h1>Building Satoshi LIRA Ecosystem...</h1>
+            <Flex justifyContent="center">
+              <div>
+                <h1>Building Satoshi LIRA Ecosystem...</h1>
+              </div>
+            </Flex>
             <br />
             <h3 >Satoshi Lira is a revolutionary project which protocol allows to generate profit from decentralized finance apps, acting as engine
               for the creation of a democratic ecosystem oriented towards political and economical freedom of its community.</h3>
           </div>
         </Flex>
-        <Flex flex={1} justifyContent="center" alignItems="center">
+        {/* <Flex flex={1} justifyContent="center" alignItems="center">
           <Flex flexDirection="column" width="30%">
             <Flex>
               <h1>Presale Supply</h1>
@@ -73,7 +77,7 @@ function PageContent() {
               <div className="button">Join Presale</div>
             </Flex>
           </Flex>
-        </Flex>
+        </Flex> */}
       </Flex>
 
     </>
