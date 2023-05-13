@@ -19,6 +19,10 @@
   font-weight: 400;
 }
 
+html {
+  font-family: ApercuMonoProRegular;
+}
+
 body {
   height: 100%;
   margin: 0;

@@ -1,5 +1,5 @@
 .Router {
-  text-align: center;
+  /* text-align: center; */
 }
 
 header {
@@ -36,7 +36,7 @@ header {
   gap: 20px;
 }
 
-.headerItem {
+/* .headerItem {
   padding: 10px;
   padding-left: 15px;
   padding-right: 15px;
@@ -50,23 +50,21 @@ header {
 .headerItem:hover {
   background-color: rgb(34, 42, 58);
   cursor: pointer;
-}
+} */
 
 .connectButton {
-  background-color: #243056; 
+  /* background-color: #243056; 
   padding: 10px;
   padding-right: 20px;
   padding-left: 20px;
   border-radius: 100px;
   color: #5981F3;
   font-weight: bold;
-  transition: 0.3s;
+  transition: 0.3s; */
+  
 }
 
-.connectButton:hover {
-  cursor: pointer;
-  color: #3b4874
-}
+
 
 .mainWindow {
   margin-top: 40px;
@@ -150,7 +148,7 @@ header {
   position: absolute;
   min-width: 50px;
   height: 30px;
-  background-color: #3a4157;
+  /* background-color: #3a4157; */
   top: 36px;
   right: 20px;
   border-radius: 100px;
@@ -167,7 +165,7 @@ header {
   position: absolute;
   min-width: 50px;
   height: 30px;
-  background-color: #3a4157;
+  /* background-color: #3a4157; */
   top: 135px;
   right: 20px;
   border-radius: 100px;
@@ -264,4 +262,78 @@ header {
   font-size: 13px;
   font-weight: 300;
   color: #51596f;
+}
+
+
+/* START CSS Nik - TODO: evaluate move in component */
+
+.rotate90deg {
+  transform: rotate(90deg);
+}
+
+:where(.css-dev-only-do-not-override-zjzpde).ant-layout {
+  background: none;
+}
+
+:where(.css-dev-only-do-not-override-zjzpde).ant-layout-header {
+  line-height: 20px;
+}
+
+:where(.css-dev-only-do-not-override-zjzpde).ant-layout-footer {
+  background: none;
+  color: white;
+}
+
+
+
+/* END CSS Nik */
+
+
+/* CSS */
+.button {
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 1px solid #37bc66;
+  margin: 20px;
+  position: relative;
+  color: #37bc66;
+  letter-spacing: 1px;
+}
+.button:before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background: #000000;
+  border: 1px solid #37bc66;
+  transform: rotate(45deg);
+  position: absolute;
+  border-top: 0;
+  border-left: 0;
+  border-bottom: 0;
+  top: -12px;
+  left: -13px;
+
+}
+.button:after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background: #000000;
+  border: 1px solid #37bc66;
+  transform: rotate(-132deg);
+  position: absolute;
+  border-top: 0;
+  border-left: 0;
+  border-bottom: 0;
+  top: auto;
+  right: -13px;
+  bottom: -12px;
+}
+
+@media (min-width: 768px) {
+  .button-59 {
+    min-width: 170px;
+  }
 }
