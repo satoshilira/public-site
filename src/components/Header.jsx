@@ -1,4 +1,3 @@
-import {Row} from 'antd';
 import React from 'react'
 import logo from "../img/topmenulogo.png";
 import Eth from "../img/eth.svg";

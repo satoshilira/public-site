@@ -39,8 +39,8 @@ function App() {
 
 function TopImage() {
   return (
-    <Flex marginLeft="8%" marginTop={150} >
-      <img src={topimage} className="img-fluid" alt="Satoshi LIRA Cryptocurrecy Revolution" />
+    <Flex justifyContent="center" marginTop={150} >
+      <img src={topImage} className="img-fluid" alt="Satoshi LIRA Cryptocurrecy Revolution" />
     </Flex>
   )
 }
