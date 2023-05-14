@@ -1,16 +1,12 @@
 import React from 'react'
-import { Link } from "react-router-dom";
-import { flexbox } from 'styled-system';
 import Flex from './Flex';
 import Typography from './Typography';
-import logo from "../img/topmenulogo.png";
 
 export default function Footer() {
   return (
-
-    <Flex justifyContent="center" borderTop="1px solid white" marginTop="20px" flexDirection='column'>
+    <Flex justifyContent="center" borderTop="1px solid white" padding="20px" flexDirection='column'>
       <Flex flexDirection="row" justifyContent="center">
-        <Flex marginTop="20px" alignItems="center">
+        <Flex alignItems="center">
           <Flex>
             <Flex padding="0 10px">
               {/* <Link to="/swap" className="headerItem link"> */}

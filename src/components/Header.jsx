@@ -1,20 +1,14 @@
 import React from 'react'
 import logo from "../img/topmenulogo.png";
-import Eth from "../img/eth.svg";
 import { Link } from "react-router-dom";
-import { Layout } from 'antd';
-import { Col, Divider, Row } from 'antd';
-import Column from 'antd/es/table/Column';
-import { flexbox } from 'styled-system';
 import Flex from './Flex';
 import Typography from './Typography';
+import Button from './Button';
 import logoArbitrum from "../img/arbitrum-shield.png"
-
-const { Header: AntdHeader } = Layout;
 
 function Header() {
   return (
-    <Flex flexDirection='row' height={80} margin="0 20px" justifyContent="center" borderBottom="1px solid white">
+    <Flex flexDirection={['column', 'column', 'row']} height={80} margin="0 20px" justifyContent="center" borderBottom="1px solid white">
       <Flex flexDirection='column' allignItems="center" justifyContent="center" width="30%">
         <Link to="/" className="link">
           <img src={logo} width={120} alt="Homepage Satoshi LIRA Project" />
@@ -55,7 +49,11 @@ function Header() {
 
         <Flex marginLeft={20} />
 
-        <div className="button"><Typography color="#3c3c3c" margin={0}>Enter Dapp</Typography></div>
+        {/* <div className="button"><Typography color="#3c3c3c" margin={0}>Enter Dapp</Typography></div> */}
+
+        <Button>
+          <Typography color="#3c3c3c" margin={0}>Enter Dapp</Typography>
+        </Button>
 
       </Flex>
       <Flex borderBottom="1px solid white" />
