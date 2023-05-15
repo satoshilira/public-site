@@ -28,7 +28,7 @@ function Header() {
         </Flex> */}
         {/* <Flex borderLeft="1px solid white" height={20} ></Flex> */}
         <Flex padding="0 10px">
-          <Link to="/swap" className="headerItem link">
+          <Link to="https://whitepaper.satoshilira.io" className="headerItem link">
             <Typography fontSize={16} color='white' margin={0}>White Paper</Typography>
           </Link>
         </Flex>
