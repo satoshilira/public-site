@@ -1,6 +1,8 @@
 import "./App.css";
 import Flex from "./components/Flex";
 import topImage from "./img/slogan.png";
+import Countdown from "./components/Countdown";
+
 
 function App() {
   return (
@@ -31,6 +33,12 @@ function App() {
               political and economical freedom of its community.
             </h3>
           </div>
+        </Flex>
+          <div>
+            <Countdown></Countdown>
+          </div>
+        <Flex>
+          
         </Flex>
         {/* <Flex flex={1} justifyContent="center" alignItems="center">
         <Flex flexDirection="column" width="30%">
