@@ -26,7 +26,7 @@ function App() {
             </Flex>
             <br />
             <h3>
-              Satoshi Lira is a revolutionary project which protocol allows to
+              Satoshi Lira is a revolutionary project whose protocol allows to
               generate profit from decentralized finance apps, acting as engine
               for the creation of a democratic ecosystem oriented towards
               political and economical freedom of its community.
