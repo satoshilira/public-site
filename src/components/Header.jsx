@@ -1,10 +1,10 @@
 import React from 'react'
-import logo from "../img/topmenulogo.png";
-import { Link } from "react-router-dom";
+import logo from '../img/topmenulogo.png';
+import { Link } from 'react-router-dom';
 import Flex from './Flex';
 import Typography from './Typography';
 import Button from './Button';
-import logoArbitrum from "../img/arbitrum-shield.png"
+import logoArbitrum from '../img/arbitrum-shield.png'
 
 function Header() {
   return (
@@ -27,10 +27,18 @@ function Header() {
           </Link>
         </Flex> */}
         {/* <Flex borderLeft="1px solid white" height={20} ></Flex> */}
+        <Flex>
         <Flex padding="0 10px">
-          <Link to="https://whitepaper.satoshilira.io" className="headerItem link">
-            <Typography fontSize={16} color='white' margin={0}>White Paper</Typography>
+          <a href="https://whitepaper.satoshilira.io" target="_blank" rel="noreferrer">
+            <Typography fontSize={16} color='white' margin={0} lineHeight="1.5em">White Paper</Typography>
+          </a>
+        </Flex>
+        <Flex border="1px solid white" margin="0 5px" padding="10px 0" />
+        <Flex padding="0 10px">
+          <Link to="/tokens" className="headerItem link">
+            <Typography fontSize={16} color='white' margin={0} lineHeight="1.5em">Tokens</Typography>
           </Link>
+        </Flex>
         </Flex>
         {/* <Flex borderLeft="1px solid white" height={20} ></Flex> */}
         {/* <Flex padding="0 10px">
@@ -54,7 +62,6 @@ function Header() {
         <Button>
           <Typography color="#3c3c3c" margin={0}>Enter Dapp</Typography>
         </Button>
-
       </Flex>
       <Flex borderBottom="1px solid white" />
     </Flex>

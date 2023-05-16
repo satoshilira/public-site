@@ -60,6 +60,15 @@ code {
     monospace;
 }
 
+a,
+a:active,
+a:visited,
+a:focus,
+a:target,
+a:visited {
+  text-decoration: none;
+}
+
 .ant-input {
   background-color: #000000 !important;
   color: white !important;

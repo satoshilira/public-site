@@ -1,11 +1,14 @@
-import "./Router.css";
-import App from "./App";
-import Header from "./components/Header";
-import { Routes, Route } from "react-router-dom";
-import Footer from "./components/Footer";
-import Flex from "./components/Flex";
+import './Router.css'; // TODO: move router.css styles in better places
+import App from './App'; // TODO: move to src/pages/Homepage.tsx
+import { Routes, Route } from 'react-router-dom';
 
-// const { Content } = Layout;
+import Flex from './components/Flex';
+import Header from './components/Header';
+import Footer from './components/Footer';
+
+// pages
+// TODO: import homepage
+import Tokens from './pages/Tokens';
 
 function Router() {
   return (
@@ -17,7 +20,8 @@ function Router() {
       <Flex flexDirection="column">
         <Header />
         <Routes>
-          <Route path="/" element={<App />} />
+          <Route path="/" element={<App />} /> {/* you know what to do ;) */}
+          <Route path="/tokens" element={<Tokens />} />
         </Routes>
       </Flex>
       <Footer />
