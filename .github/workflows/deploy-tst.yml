@@ -4,8 +4,10 @@
 name: Deploy Test
 
 on:
-  pull_request:
-    branches: [ "develop" ]
+  push:
+    branches:
+      - master
+      - develop
 
 jobs:
   build:
