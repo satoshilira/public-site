@@ -10,6 +10,8 @@ const StyledMetamaskLogo = styled.img`
   cursor: pointer;
 `;
 
+console.log()
+
 export default function Tokens() {
   // return (
   //   <Flex flexDirection="column" alignItems="center" marginTop={50}>
