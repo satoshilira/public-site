@@ -1,5 +1,8 @@
 {
     "cSpell.words": [
         "Arbiscan"
-    ]
+    ],
+    "search.exclude": {
+        "**/.sst": true
+      }
 }

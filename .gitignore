@@ -23,3 +23,19 @@ yarn-debug.log*
 yarn-error.log*
 
 .idea
+
+# dependencies
+node_modules
+
+# sst
+.sst
+.build
+
+# opennext
+.open-next
+
+# misc
+.DS_Store
+
+# local env files
+.env*.local

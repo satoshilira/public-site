@@ -19,11 +19,21 @@
     "use-debounce": "^9.0.4",
     "web-vitals": "^2.1.4"
   },
+  "devDependencies": {
+    "sst": "^2.8.24",
+    "aws-cdk-lib": "2.72.1",
+    "constructs": "10.1.156",
+    "typescript": "^5.0.4",
+    "@tsconfig/node16": "^1.0.4"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "sst:build": "sst build",
+    "sst:deploy": "sst deploy",
+    "sst:remove": "sst remove"
   },
   "eslintConfig": {
     "extends": [
