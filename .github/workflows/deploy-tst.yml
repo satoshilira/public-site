@@ -36,3 +36,5 @@ jobs:
 
     - name: Deploy
       run: yarn sst:deploy
+      env:
+        CI: false
