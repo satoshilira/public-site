@@ -32,8 +32,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "sst:build": "sst build",
-    "sst:deploy": "sst deploy",
-    "sst:remove": "sst remove"
+    "sst:deploy": "sst deploy --stage tst --region eu-central-1",
+    "sst:remove": "sst deploy --stage tst --region eu-central-1"
   },
   "eslintConfig": {
     "extends": [
