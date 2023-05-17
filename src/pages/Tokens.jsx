@@ -11,9 +11,6 @@ const StyledMetamaskLogo = styled.img`
 `;
 
 export default function Tokens() {
-  return (
-    <Typography>Coming Soon!</Typography>
-  )
   // return (
   //   <Flex flexDirection="column" alignItems="center" marginTop={50}>
   //     <Flex flexDirection="column" alignItems="center">
