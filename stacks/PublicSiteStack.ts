@@ -5,7 +5,7 @@ export function PublicSiteStack({ stack }: StackContext) {
 
   const zoneName = `satoshilira.${stack.stage === "prd" ? "io" : "xyz"}`;
 
-  const platformSite = new StaticSite(this, 'PublicSite', {
+  const site = new StaticSite(this, 'PublicSite', {
     path: '.',
     buildOutput: 'build',
     buildCommand: `npm run build`,
@@ -32,10 +32,7 @@ export function PublicSiteStack({ stack }: StackContext) {
 
   // Show the endpoint in the output
   this.addOutputs({
-    'PlatformSiteUrl': platformSite.url,
+    'PublicSiteUrl': site.url,
   });
-  
-  stack.addOutputs({
-    ApiEndpoint: api.url,
-  });
+
 }

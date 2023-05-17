@@ -33,7 +33,7 @@
     "eject": "react-scripts eject",
     "sst:build": "sst build",
     "sst:deploy": "sst deploy --stage tst --region eu-west-1",
-    "sst:remove": "sst deploy --stage tst --region eu-west-1"
+    "sst:remove": "sst remove --stage tst --region eu-west-1"
   },
   "eslintConfig": {
     "extends": [
