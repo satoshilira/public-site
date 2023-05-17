@@ -60,7 +60,7 @@ function Header() {
         {/* <div className="button"><Typography color="#3c3c3c" margin={0}>Enter Dapp</Typography></div> */}
 
         <Button>
-          <Typography color="#3c3c3c" margin={0}>Enter Dapp</Typography>
+          <Typography color="#3c3c3c" margin={0}>Enter Daaaapp</Typography>
         </Button>
       </Flex>
       <Flex borderBottom="1px solid white" />
