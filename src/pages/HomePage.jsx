@@ -1,9 +1,8 @@
-import "./App.css";
-import Flex from "./components/Flex";
-import topImage from "./img/slogan.png";
+import Flex from "../components/Flex";
+import topImage from "../img/slogan.png";
 
 
-function App() {
+export default function HomePage() {
   return (
     <Flex flexDirection="column">
       <Flex justifyContent="center" marginTop={50}>
@@ -33,7 +32,7 @@ function App() {
             </h3>
           </div>
 
-          
+
         </Flex>
         {/* <Flex flex={1} justifyContent="center" alignItems="center">
         <Flex flexDirection="column" width="30%">
@@ -55,5 +54,3 @@ function App() {
     </Flex>
   );
 }
-
-export default App;

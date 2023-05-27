@@ -1,5 +1,5 @@
 import './Router.css'; // TODO: move router.css styles in better places
-import App from './App'; // TODO: move to src/pages/Homepage.tsx
+import HomePage from './pages/HomePage'; // TODO: move to src/pages/Homepage.tsx
 import { Routes, Route } from 'react-router-dom';
 
 import Flex from './components/Flex';
@@ -20,7 +20,7 @@ function Router() {
       <Flex flexDirection="column">
         <Header />
         <Routes>
-          <Route path="/" element={<App />} /> {/* you know what to do ;) */}
+          <Route path="/" element={<HomePage />} /> {/* you know what to do ;) */}
           <Route path="/tokens" element={<Tokens />} />
         </Routes>
       </Flex>
