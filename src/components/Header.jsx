@@ -28,17 +28,23 @@ function Header() {
         </Flex> */}
         {/* <Flex borderLeft="1px solid white" height={20} ></Flex> */}
         <Flex>
-        <Flex padding="0 10px">
-          <a href="https://whitepaper.satoshilira.io" target="_blank" rel="noreferrer">
-            <Typography fontSize={16} color='white' margin={0} lineHeight="1.5em">White Paper</Typography>
-          </a>
-        </Flex>
-        <Flex border="1px solid white" margin="0 5px" padding="10px 0" />
-        <Flex padding="0 10px">
-          <Link to="/tokens" className="headerItem link">
-            <Typography fontSize={16} color='white' margin={0} lineHeight="1.5em">Tokens</Typography>
-          </Link>
-        </Flex>
+          <Flex padding="0 10px">
+            <a href="https://whitepaper.satoshilira.io" target="_blank" rel="noreferrer">
+              <Typography fontSize={16} color='white' margin={0} lineHeight="1.5em">White Paper</Typography>
+            </a>
+          </Flex>
+          <Flex border="1px solid white" margin="0 5px" padding="10px 0" />
+          <Flex padding="0 10px">
+            <Link to="/tokens" className="headerItem link">
+              <Typography fontSize={16} color='white' margin={0} lineHeight="1.5em">Tokens</Typography>
+            </Link>
+          </Flex>
+          <Flex border="1px solid white" margin="0 5px" padding="10px 0" />
+          <Flex padding="0 10px">
+            <Link to="/sacrifice" className="headerItem link">
+              <Typography fontSize={16} color='white' margin={0} lineHeight="1.5em">Sacrifice</Typography>
+            </Link>
+          </Flex>
         </Flex>
         {/* <Flex borderLeft="1px solid white" height={20} ></Flex> */}
         {/* <Flex padding="0 10px">

@@ -1,14 +1,13 @@
 import './Router.css'; // TODO: move router.css styles in better places
-import HomePage from './pages/HomePage'; // TODO: move to src/pages/Homepage.tsx
+import Home from './pages/Home';
+import Sacrifice from './pages/Sacrifice';
+import Tokens from './pages/Tokens';
+
 import { Routes, Route } from 'react-router-dom';
 
 import Flex from './components/Flex';
 import Header from './components/Header';
 import Footer from './components/Footer';
-
-// pages
-// TODO: import homepage
-import Tokens from './pages/Tokens';
 
 function Router() {
   return (
@@ -20,8 +19,9 @@ function Router() {
       <Flex flexDirection="column">
         <Header />
         <Routes>
-          <Route path="/" element={<HomePage />} /> {/* you know what to do ;) */}
+          <Route path="/" element={<Home />} /> {/* you know what to do ;) */}
           <Route path="/tokens" element={<Tokens />} />
+          <Route path="/sacrifice" element={<Sacrifice />} />
         </Routes>
       </Flex>
       <Footer />

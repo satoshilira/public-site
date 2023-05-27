@@ -2,7 +2,7 @@ import Flex from "../components/Flex";
 import topImage from "../img/slogan.png";
 
 
-export default function HomePage() {
+export default function Home() {
   return (
     <Flex flexDirection="column">
       <Flex justifyContent="center" marginTop={50}>
