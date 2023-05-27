@@ -41,7 +41,7 @@ export default function Tokens() {
           </Typography>
           <Flex marginLeft={10} />
           <a
-            href="https://arbiscan.io/address/0xA07ac236fEBc390c798504E927DC8D6a4e1FfcA3#code"
+            href="https://arbiscan.io/address/0xA07ac236fEBc390c798504E927DC8D6a4e1FfcA3"
             target="_blank"
             rel="noreferrer"
           >
@@ -65,7 +65,7 @@ export default function Tokens() {
         </Flex>
         <Flex alignItems="center">
         <StyledTokenLink
-          href="https://arbiscan.io/address/0xA07ac236fEBc390c798504E927DC8D6a4e1FfcA3#code"
+          href="https://arbiscan.io/address/0xA07ac236fEBc390c798504E927DC8D6a4e1FfcA3"
           target="_blank"
           rel="noreferrer"
         >
