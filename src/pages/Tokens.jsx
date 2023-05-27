@@ -18,6 +18,18 @@ const StyledTokenLink = styled.a`
     color: white;
   }
 `
+const StyledCopyButton = styled(Typography)`
+  color: #888888;
+
+  &:active {
+    color: #aaaaaa;
+  }
+
+  &::selection {
+    color: inherit;
+    background: inherit;
+  }
+`
 
 export default function Tokens() {
   return (
@@ -51,6 +63,7 @@ export default function Tokens() {
             onClick={addLiraToken}
           />
         </Flex>
+        <Flex alignItems="center">
         <StyledTokenLink
           href="https://arbiscan.io/address/0xA07ac236fEBc390c798504E927DC8D6a4e1FfcA3#code"
           target="_blank"
@@ -59,10 +72,11 @@ export default function Tokens() {
           <Typography fontSize={24} margin={0} color="white" marginTop={0}>
             0xA07ac236fEBc390c798504E927DC8D6a4e1FfcA3
           </Typography>
-          <Typography onClick={() => navigator.clipboard.writeText('0xA07ac236fEBc390c798504E927DC8D6a4e1FfcA3')}>
-            Copy
-          </Typography>
         </StyledTokenLink>
+        <StyledCopyButton onClick={() => navigator.clipboard.writeText('0xA07ac236fEBc390c798504E927DC8D6a4e1FfcA3')} marginLeft={3} cursor="pointer">
+          Copy
+        </StyledCopyButton>
+        </Flex>
       </Flex>
 
       {/* <Flex flexDirection="column" alignItems="center">
